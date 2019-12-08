@@ -161,8 +161,6 @@ class Tablut(Game):
     def terminal_test(self, state):
         if state[0] == 'BW' or state[0] == 'WW':
             return True
-        if self.draw(state):
-            return True
         return False
 
     # preso lo state ritorna quale gocatore deve muovere (questa info deve essere dentro lo state)
