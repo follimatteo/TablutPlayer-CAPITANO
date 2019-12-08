@@ -1,8 +1,10 @@
-# My awesome REST API
+# Tablut player
+
 
 '''
 pip install Flask 
-python app.py
+python Client.py White/Black timeout IP_AD
+
 '''
 
 ## Description
