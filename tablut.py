@@ -170,14 +170,6 @@ class Tablut(Game):
         #print('muove il: ',state[0])
         return state[0]
 
-    # definisce la condizione di pareggio (da decidere se implementare)
-    def draw(self, state):
-        current_checkers = (len(self.white), len(self.black))
-        if current_checkers == self.n_checkers:
-            if state[1] in self.previous_states:
-                return True
-        return False
-
     # presa una condizione di vittoria e un giocatore ritorna un punteggio (?)
     def utility(self, state, player):
         if self.draw(state):
