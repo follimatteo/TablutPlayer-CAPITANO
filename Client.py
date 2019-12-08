@@ -10,6 +10,7 @@ import threading as t
 import multiprocessing as mp
 import time
 
+color = None
 move = None
 m_value = - float('inf')
 m_depth = 0
@@ -19,7 +20,7 @@ ip_adress = "localhost"
 
 
 def main():
-    global timeout, ip_adress, move, m_value, m_depth, stop_flag      # shared variables
+    global color timeout, ip_adress, move, m_value, m_depth, stop_flag      # shared variables
     act = mp.Queue()            # queue where we save the best intermediate move
 
     if len(sys.argv) != 4:
