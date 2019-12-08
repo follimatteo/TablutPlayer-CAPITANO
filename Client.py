@@ -41,7 +41,7 @@ def main():
 
     client = Client(ip_adress, port)
     my_heuristic = tablut.Tablut(color).white_evaluation_function
-    search = games.alphabeta_cutoff_search   # NB: my_games (not games)
+    search = games.alphabeta_cutoff_search   # NB: games (not games)
 
     try:
         # present name
@@ -163,7 +163,7 @@ def actual(act, part, search, turn, state_np, my_heuristic):
     '''
     for depth in range(1, 10):
         # NB: TWO (not one) VALUES RETURNED FROM SEARCH
-        action, search_value = search((turn, state_np), tablut_noPrint.Tablut(color), d=depth, cutoff_test=None, eval_fn=my_heuristic, part=part)
+        action, search_value = search((turn, state_np), tablut.Tablut(color), d=depth, cutoff_test=None, eval_fn=my_heuristic, part=part)
 
         act.put((action, search_value, depth))
 
