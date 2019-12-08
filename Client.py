@@ -20,7 +20,7 @@ ip_adress = "localhost"
 
 
 def main():
-    global color timeout, ip_adress, move, m_value, m_depth, stop_flag      # shared variables
+    global color, timeout, ip_adress, move, m_value, m_depth, stop_flag      # shared variables
     act = mp.Queue()            # queue where we save the best intermediate move
 
     if len(sys.argv) != 4:
