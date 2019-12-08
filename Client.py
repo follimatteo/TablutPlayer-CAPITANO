@@ -39,7 +39,7 @@ def main():
 
     lock = t.Lock()     # lock needed to acces critical section (global move)
 
-    client = Client(host, port)
+    client = Client(ip_adress, port)
     my_heuristic = tablut.Tablut(color).white_evaluation_function
     search = games.alphabeta_cutoff_search   # NB: my_games (not games)
 
