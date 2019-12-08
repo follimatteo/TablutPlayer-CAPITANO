@@ -172,9 +172,7 @@ class Tablut(Game):
 
     # presa una condizione di vittoria e un giocatore ritorna un punteggio (?)
     def utility(self, state, player):
-        if self.draw(state):
-            return 0
-        elif state[0] == 'BW' and player == 'B':
+        if state[0] == 'BW' and player == 'B':
             return 1000000
         elif state[0] == 'WW' and player == 'B':
             return -1000000
