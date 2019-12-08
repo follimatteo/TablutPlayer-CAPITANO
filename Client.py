@@ -22,20 +22,20 @@ def main():
     global timeout, ip_adress, move, m_value, m_depth, stop_flag      # shared variables
     act = mp.Queue()            # queue where we save the best intermediate move
 
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         exit(1)
 
-    if sys.argv[0] == 'White':     # WIHITE port
+    if sys.argv[1] == 'White':     # WIHITE port
         color = 'W'
         port = 5800
-    elif sys.argv[0] == 'Black':   # BLACK port
+    elif sys.argv[1] == 'Black':   # BLACK port
         color = 'B'
         port = 5801
     else:
         exit(1)
 
-    timeout = int(sys.argv[1])
-    ip_adress = str(sys.argv[2])
+    timeout = int(sys.argv[2])
+    ip_adress = str(sys.argv[3])
 
     lock = t.Lock()     # lock needed to acces critical section (global move)
 
