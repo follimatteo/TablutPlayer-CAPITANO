@@ -103,7 +103,7 @@ def alphabeta_cutoff_search(state, game, d=4, cutoff_test=None, eval_fn=None, pa
     # two different versions to speed-up the computation
     if part == 1:
         action_set = game.actions(state)[:len(game.actions(state))//3]
-    elif == 2:
+    elif part == 2:
         action_set = game.actions(state)[len(game.actions(state))//3:len(game.actions(state))*2//3]
     else:
         action_set = game.actions(state)[len(game.actions(state))*2//3:]
